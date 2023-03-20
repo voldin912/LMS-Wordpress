@@ -1,0 +1,33 @@
+name: Generate documentation
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set git user
+        run: git config --global user.email "musicofbyte@gmail.com"
+      - name: set git name
+        run: git config --global user.name "Tochi Bedford"
+      - name: Checkout documentation branch
+        run: git checkout -b documentation
+      - name: Install dependencies
+        run: npm install
+      - name: Pull from documentation branch
+        run: git pull --rebase --autostash origin documentation
+      - name: Generate documentation
+        run: npx typedoc ./src
+      - name: Add documentation files
+        run: git add docs
+      - name: Commit documentation
+        run: git commit -m "Generate documentation"
+      - name: Push documentation to branch
+        run: git push origin documentation

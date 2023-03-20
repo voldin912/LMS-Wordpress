@@ -1,0 +1,295 @@
+<?php
+/*
+Template Name: product-page
+Template Post Type: post, page, product
+*/
+
+//
+
+get_header(white);
+?>
+        <section class="sec1-p cursor-prewie sg-popup-id-335">
+            <div class="container ">
+                <div class="i1">
+                    <div class="t1">for entrepreneurs and startups</div>
+                    <div class="tt1">masterclass 01</div>
+                </div>
+                <div class="t2">Branding and strategy workshop: realign your ideas in one day</div>
+                <div class="bottom-t4">
+                                        <div class="btn-slider">Early bird offer</div>
+                                        <div class="t4">All new</div>
+                                    </div>
+            </div>
+            <div class="mobile-banner-product">
+                <img class="bg-banner-product" src="<?php echo get_template_directory_uri(); ?>/assets/img/banner-prod.png" alt="">
+                <img class="hover-banner-product" src="<?php echo get_template_directory_uri(); ?>/assets/img/banner-hover-product.png" alt="">
+            </div>
+        </section>
+        <section class="sec2-p">
+            <div class="container">
+                        <div>
+                            <input type="checkbox" class="read-more-state" id="post-2" />
+
+                            
+                            <label for="post-2" class="read-more-trigger read-more-tr-product"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-minimize.svg" alt=""></label>
+
+                            <div class="read-more-wrap">
+                                <div class="read-more-target">
+                                <div class="block-info">
+                                        <div class="col" style="margin-right: 69px;">
+                                            <div class="t1">50% discount Early bird offer ends in</div>
+                                            <div class="timer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/timer.png" alt=""></div>
+                                        </div>
+                                        <div class="col">
+                                            <div>
+                                                <input type="radio" id="huey" name="drone" value="huey" checked>
+                                                <label for="huey">Masterclass only</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="dewey" name="drone" value="dewey">
+                                                <label for="dewey">Masterclass + Personal feedback</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="dewey" name="drone" value="dewey">
+                                                <label for="dewey">Masterclass + PErsonal feedback + 1:1 consultancy</label>
+                                            </div>
+                                            <div class="t2">Includes a personal call with me. Learn more about consultancy and my methods here.<span style="color: red;">8 spots left</span></div>
+                                        </div>
+                                        <div class="col col-btn-show">
+                                            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-basket.svg" alt=""> Buy now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+            </div>
+        </section>
+        <section class="sec3-p">
+            <div class="container">
+                <div class="block">
+                    <div class="block-t">
+                        <div class="panel">
+                            <div class="t1">About the course</div>
+                            <div class="t2">
+                                Fact: approximately 90% of startups fail. Why? Money running out, targeting the wrong 
+                                market and lack of research resulting in a poor marketing strategy. The most exciting part of 
+                                launching a project is usually  the conceptualization and branding, yet they are the first steps 
+                                where entrepreneurs and brands waste their budget in. Before you even decide to hire a costly designer
+                                for your brand or rebrand, we need to tackle your fundamentals and look at the big picture.
+                                </div><div class="t2">
+                                This brand strategy workshop will help you do exactly that, in just one day. We will establish the DNA 
+                                of your brand by defining who you are and what you want to do. Throughout this workshop, you will study
+                                the market branding, learn further
+                            </div>
+                        </div>   
+                        <div class="t2" style="margin-left: 20px;text-indent:0px!important">
+                            about brand positioning settle a personal branding strategy if you wish to and target just right your
+                            audience. We will go through exercises to find out-of-the-box campaign ideas and create a memorable story
+                            that consumers will not only understand, but also remember and share. I will share with you my most precious 
+                            resources to gather good inspiration and create a global art direction for your brand. We will create a 
+                            professional briefing to find the right talent that will execute your vision into beautiful designs.
+                            <br><br> 
+                            This brand strategy workshop guarantees a smooth launch. You can take it on your own as a single
+                            entrepreneur or with your associates. Developed 5 years ago, this formula is still praised today by 
+                            every single one of my clients. The standard cost with preparation, workshop day and report starts 
+                            from $5000.
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="i1">
+                            <div class="df jb">
+                                <div class="tt1">Level</div>
+                                <div class="tt1">intermediate</div>
+                            </div>
+                            <div class="tt2">no design or marketing knowledge required.</div>
+                        </div>
+                        <div class="i2 df jb">
+                            <div class="tt1">Testimonials</div>
+                            <a class="btn-read" href="<?php echo home_url(); ?>/testimonial/">Read</a>
+                        </div>
+                        <div class="i3">
+                            <div class="tt1">keywords</div>
+                            <div class="t_2" style="max-width: 318px;">
+                                Branding, dna, brand positioning, target audience, competitors, marketing, social media, website,
+                                campaigns, personal branding strategy
+                            </div>
+                        </div>
+                        <div class="i4 df jb">
+                            <div class="tt1">Money back guarantee</div>
+                            <div class="tt1">14</div>
+                        </div>
+                        <div class="i5 df jb">
+                            <div class="tt1">Access to updates</div>
+                            <div class="tt1">lifetime</div>
+                        </div>
+                        <div class="i6 df jb">
+                            <div class="tt1">VAT Invoice</div>
+                            <div class="tt1">Yes</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t4">If you don’t create emotions, you don’t create loyalty.</div>
+            </div>
+        </section>
+        <section class="sec4-p">
+            <div class="container">
+                <div class="t1">Chapters and content</div>
+                <div id="scroller">
+                    <ul class="df">
+                        <li>
+                            <div class="card">
+                                <div class="t1">Branding, dna, brand positioning, target audience, competitors, marketing, 
+                                    social media, website, campaigns
+                                </div>
+                                <div class="t2">Save money by thinking ahead: the big picture approach</div>
+                                <div class="t3">01</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <div class="t1">How this format was born and why it’s the most efficient way to get your ideas out
+                                </div>
+                                <div class="t2">From fundamentals to marketing channels</div>
+                                <div class="t3">02</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <div class="t1">Understanding how branding is linked to every marketing channel and deciding what to tackle first.
+                                </div>
+                                <div class="t2">The workshop format</div>
+                                <div class="t3">03</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <div class="t1">Timing is what will keep us accountable. Let’s prep everything in advance, to the minute.
+                                </div>
+                                <div class="t2">the schedule and the prep</div>
+                                <div class="t3">04</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <div class="t1">Analyze your market to understand what works, what you like, what you don’t like. Let’s look at your competitors and your non-competitors.
+                                </div>
+                                <div class="t2">benchmark and competitors</div>
+                                <div class="t3">05</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <div class="t1">Branding, dna, brand positioning, target audience, competitors, marketing, 
+                                    social media, website, campaigns
+                                </div>
+                                <div class="t2">Save money by thinking ahead: the big picture approach</div>
+                                <div class="t3">06</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <div class="t1">Branding, dna, brand positioning, target audience, competitors, marketing, 
+                                    social media, website, campaigns
+                                </div>
+                                <div class="t2">Save money by thinking ahead: the big picture approach</div>
+                                <div class="t3">07</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <div class="t1">Branding, dna, brand positioning, target audience, competitors, marketing, 
+                                    social media, website, campaigns
+                                </div>
+                                <div class="t2">Save money by thinking ahead: the big picture approach</div>
+                                <div class="t3">08</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="t2-b">
+                    <div class="tt2">Includes</div>
+                    <div class="tt3">Videos, templates, google slides, miro board, resources, links</div>
+                </div>
+            </div>
+        </section>
+        <section class="sec5-p">
+            <div class="container">
+                <div class="t1">frequently asked questions</div>
+                <div class="i1">
+                    <div class="left-side">
+                        Is it going to be useful for me?
+                    </div>
+                    <div class="right-side">
+                        If you’re an entrepreneur or startup working on an idea, a product, a business: yes. If you’re
+                        looking to refresh your brand and create consistency: yes. If you’re a designer or art director 
+                        looking to facilitate a workshop with your clients: yes.
+                    </div>
+                </div>
+                <div class="i2">
+                    <div class="left-side">
+                        When is the best time to follow this course?
+                    </div>
+                    <div class="right-side">
+                        Ideally before you’ve hired anyone or go too far into branding and marketing. This can work before you (re)launch a brand or a campaign.
+                    </div>
+                </div>
+                <div class="i2">
+                    <div class="left-side">
+                        For what kind of projects/business?
+                    </div>
+                    <div class="right-side">
+                        Any. You might be creating a bureau of architecture, a clothing brand, a delivery app, a website that sells pictures of feet. Any business needs a unique identity, and any identity needs strong fondations.
+                    </div>
+                </div>
+                <div class="i2">
+                    <div class="left-side">
+                        What do I get out of the process?
+                    </div>
+                    <div class="right-side">
+                        Ultimately confidence. Confidence to speak clearly about your project because your ideas and speech are clear, and confidence that you’re one the right path. In this house, we don’t allow imposter syndrome. We work through it.
+                    </div>
+                </div>
+                <div class="i2">
+                    <div class="left-side">
+                        IS this 100% effective?
+                    </div>
+                    <div class="right-side">
+                        In my career I’ve never got any dissatisfied client using this formula - they were always, always happy. On the contrary, I found that when I try to bypass it and rush into execution too fast, I eventually end up doing this workshop mid-project.
+                    </div>
+                </div>
+                <div class="i3">
+                    <div class="left-side">
+                        What’s your guarantee policy?
+                    </div>
+                    <div class="right-side">
+                        My business thrives on happy clients - If you’re not pleased with the course, you will be reimbursed. Check out the full policy before buying.
+                    </div>
+                </div>    
+            </div>
+        </section>
+        <section class="sec4 sec4-p">
+            <div class="container">
+                <div class="block">
+                    <form action="">         
+                        <div class="t1">Once in a while I send hilarious emails with insightful tips. Curious?</div>
+                        <div class="container-fs">
+                            <div style="display: flex; flex-direction: column;">
+                            <input class="input-subscribe" type="text" placeholder="Your pretty name" name="name" required>
+                            <input  class="input-subscribe"type="text" placeholder="myemail@toilet.com" name="mail" required>
+                            </div>
+                            <label>
+                            <input class="chackbox-sub" type="checkbox" checked="checked" name="subscribe">I prefer whatsapp
+                            </label>
+                        </div>
+
+                        <div class="btn-submit">
+                            <input type="submit" value="Subscribe"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/arr-right-subscribe.svg" alt="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+<?php
+get_footer('pinki');

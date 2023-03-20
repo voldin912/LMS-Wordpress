@@ -1,0 +1,10 @@
+<div class="footer-subscribe-input">
+[text user-name class:input-subscribe placeholder "Your pretty name"]
+</div>
+<div class="footer-subscribe-mail">
+[email* your-email autocomplete:email class:input-subscribe placeholder "myemail@toilet.com"]
+</div>
+<div class=mycheckbox><input type="checkbox" id="Option"><label class="checkbox" for="Option"><span style="text-indent:15px">I</span><span style="text-indent:8px">prefer whatsapp<span></label></div>
+<div class="whatsapp"><input  class="input-subscribe" type="text" placeholder="+00 0000 00 00"></div>
+</div><div id="btn_submit" class="btn-submit"><input type="submit" value="Subscribe"><img src="https://sainttran.com/wp-content/themes/masterclass_them/assets/img/arr-right-subscribe.svg" alt=""></div>
+</div>
