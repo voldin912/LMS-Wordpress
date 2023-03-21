@@ -1,0 +1,9 @@
+{
+    "require-dev": {
+        "phpunit/phpunit": "^7",
+        "yoast/phpunit-polyfills": "^1.0"
+    },
+    "scripts": {
+        "test:units": "vendor/bin/phpunit"
+    }
+}

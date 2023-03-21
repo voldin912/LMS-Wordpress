@@ -1,0 +1,112 @@
+#!/usr/bin/env bash
+#
+# Build a release-ready version of the plugin.
+#
+# USAGE:
+#
+#   build [<filename>]
+#
+# ARGUMENTS:
+#
+#   <filename>  The filename for the generated archive. Default is "learndash-woocommerce.zip".
+
+set -e
+
+# Set up colors.
+color_cyan="\033[0;36m"
+color_green="\033[0;32m"
+color_red="\033[0;31m"
+color_reset="\033[0;0m"
+
+output_file="$(basename "${1:-"learndash-woocommerce.zip"}")"
+
+# Output helpers
+info() {
+    printf "\n${color_cyan}%s${color_reset}\n" "$1"
+}
+
+error() {
+    printf "\n${color_red}[ERROR] ${color_reset}%s\n" "$1" >&2
+}
+
+# Make sure that we have the learndash-woocommerce directory and main file.
+if [[ ! -f "learndash_woocommerce.php" ]]; then
+	error "Could not find the learndash-woocommerce directory or main file."
+	exit 1
+fi
+
+# Make sure Composer is already installed
+info "Verifying that Composer is installed"
+composer_path="$(command -v composer)"
+
+if [[ -n $composer_path ]]; then
+    printf "Using Composer at %s\n" "$composer_path"
+else
+    error "Composer could not be found locally!"
+    echo "Please visit https://getcomposer.org/download/ for instructions"
+    exit 2
+fi
+
+# Make sure rsync is already installed
+info "Verifying that rsync is installed"
+rsync_path="$(command -v rsync)"
+
+if [[ -n $rsync_path ]]; then
+    printf "Using rsync at %s\n" "$rsync_path"
+else
+    error "rsync could not be found locally!"
+    echo "Please visit https://rsync.samba.org/ for instructions"
+    exit 2
+fi
+
+# Remove the old dist/ directory, if it exists
+if [[ -d dist ]]; then
+    info "Removing existing dist/ directory"
+    rm -rf ./dist
+fi
+
+mkdir -p dist
+mkdir -p dist/learndash-woocommerce
+
+info "Copying files"
+# cp composer.json dist/learndash-woocommerce/composer.json
+# cp composer.lock dist/learndash-woocommerce/composer.lock
+
+# Copy over everything from learndash-woocommerce/ into dist/, without the unnecessary folders and files for distribution.
+rsync --recursive --verbose --exclude='bin' --exclude='vendor' --exclude='dist' --exclude='tests' --exclude='.*' --exclude="node_modules" --exclude="src" --exclude="package.json" --exclude="package-lock.json" --exclude="*.config.js" --exclude="jsconfig.json" --exclude='phpunit*' --exclude="*.code-workspace" --exclude="*.zip" ./ dist/learndash-woocommerce
+
+# Install the production dependencies with an optimized autoloader.
+# info "Installing production dependencies"
+# composer install --working-dir=dist/learndash-woocommerce --no-dev --no-progress --optimize-autoloader
+
+# We don't need to distribute Composer files.
+# rm dist/learndash-woocommerce/composer.json
+# rm dist/learndash-woocommerce/composer.lock
+
+# Run Laravel Mix to build production dependencies.
+# MIX_BUILD_DIR=dist/learndash-woocommerce npm run production
+
+# Finally, create the output zip file.
+info "Building ${output_file}"  
+
+# Remove the existing archive, if one exists.
+if [ -f "$output_file" ]; then
+	info "Removing the existing ${output_file} archive"
+	rm "$output_file"
+fi
+
+# Important: This needs to be run from within the dist/ directory, or the resulting archive will
+# have an additional level of file hierarchy that will break the plugin!
+cd dist || exit 1;
+zip --quiet --recurse-paths --no-dir-entries "../${output_file}" .
+
+# Test the archive structure.
+info "Testing ${output_file}"
+archive_contents="$(zipinfo -1 "../${output_file}")"
+
+if ! grep -qx 'learndash-woocommerce/learndash_woocommerce.php' <<< "$archive_contents"; then
+	error "${output_file} should have 'learndash_woocommerce.php' at the root of the learndash-woocommerce folder."
+	exit 1
+fi
+
+printf "\n${color_green}%s has been built successfully!${color_reset}\n" "$output_file"
