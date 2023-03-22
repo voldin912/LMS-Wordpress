@@ -1,0 +1,5 @@
+{
+  "require": {
+     "yuzuru-s/post-to-wp": "1.0.*"
+  }
+}
